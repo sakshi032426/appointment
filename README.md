@@ -16,7 +16,7 @@ These instructions will help you set up and run the appointment booking frontend
 1. Clone the repository to your local machine:
 
     ```bash
-    git clone https://github.com/your-username/sakshi-fitness-appointment.git
+    git clone https:(https://sakshi032426.github.io/appointment/)
     ```
 
 2. Navigate to the project directory:
