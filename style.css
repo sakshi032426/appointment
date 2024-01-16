@@ -38,6 +38,53 @@ body {
     .container {
         width: 90%;
     }
+.calendar-appointments-table {
+        width: 100%;
+        overflow-x: auto;
+        table-layout: fixed; /* Added to ensure uniform column width */
+    }
+
+    .calendar-appointments-table th,
+    .calendar-appointments-table td {
+        box-sizing: border-box;
+        padding: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%; /* Added to prevent overflow */
+    }
+
+    .calendar-appointments-table thead tr,
+    .calendar-appointments-table tbody tr {
+        display: block;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+    }
+
+    .calendar-appointments-table td {
+        border: none;
+        position: relative;
+    }
+
+    .calendar-appointments-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 5px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        box-sizing: border-box;
+    }
+
+    /* Additional style for phone date message */
+    .calendar-appointments-table .phone-date-message {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
 
     .form-group input,
     .form-group textarea {
