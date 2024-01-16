@@ -1,3 +1,55 @@
+/* ... (previous styles) */
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    /* ... (previous styles) */
+
+    /* Styles for calendar table */
+    .calendar-appointments-table {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .calendar-appointments-table th,
+    .calendar-appointments-table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: left;
+        padding: 10px;
+        white-space: nowrap; /* Prevent text from wrapping */
+        overflow: hidden; /* Hide overflow */
+    }
+
+    .calendar-appointments-table thead tr,
+    .calendar-appointments-table tbody tr {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+    }
+
+    .calendar-appointments-table td {
+        border: none;
+        position: relative;
+        box-sizing: border-box;
+        white-space: nowrap; /* Prevent text from wrapping */
+        overflow: hidden; /* Hide overflow */
+    }
+
+    .calendar-appointments-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 5px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap; /* Prevent text from wrapping */
+        overflow: hidden; /* Hide overflow */
+        box-sizing: border-box;
+    }
+}
+
+/* ... (remaining styles) */
 /* Reset styles */
 body {
     font-family: 'Baloo Bhai', cursive;
