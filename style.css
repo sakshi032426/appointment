@@ -34,29 +34,11 @@ body {
 }
 
 /* Responsive styles */
+/* ... (previous styles) */
+
+/* Responsive styles */
 @media only screen and (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
-
-    .form-group input,
-    .form-group textarea {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .form-group {
-        display: block;
-        padding: 15px;
-        box-sizing: border-box;
-    }
-
-    /* Styles for appointment form */
-    .appoin-form button {
-        display: block;
-        width: 100%;
-        margin: 20px 0;
-    }
+    /* ... (previous styles) */
 
     /* Styles for calendar table */
     .calendar-appointments-table {
@@ -96,49 +78,14 @@ body {
         text-overflow: ellipsis;
         box-sizing: border-box;
     }
+
+    /* Additional style for phone date message */
+    .calendar-appointments-table .phone-date-message {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
 
-/* Styles for appointment card and actions */
-.appointment-card,
-.calendar-appointment-card,
-.appointment-details {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    padding: 10px;
-}
+/* ... (remaining styles) */
 
-.card-info,
-.calendar-appointment-card .card-info {
-    flex: 1;
-    margin-right: 10px;
-}
-
-.card-actions,
-.calendar-appointment-card .card-actions {
-    flex: 1;
-    display: flex;
-    justify-content: space-around;
-}
-
-.btn {
-    padding: 5px 10px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-}
-
-.edit-btn {
-    background-color: #4caf50;
-    color: white;
-}
-
-.delete-btn {
-    background-color: #f44336;
-    color: white;
-}
-
-.delete-btn {
-    background-color: #f44336;
-    color: white;
-}
