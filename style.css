@@ -1,191 +1,139 @@
- /* CSS Reset */
- body {
+/* Reset styles */
+body {
     font-family: 'Baloo Bhai', cursive;
     color: white;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     background: url('gym22.jpg');
 }
 
-.left {
-    display: inline-block;
-    /* border: 2px solid red; */
-    position: absolute;
-    left: 60px;
-    top: 20px;
-}
-
-.left img {
-    width: 136px;
-    filter: invert(100%);
-}
-
-.left div {
-    line-height: 19px;
-    font-size: 26px;
-    text-align: center;
-}
-
-.mid {
-    display: block;
-    width: 36%;
-    margin: 29px auto;
-    /* border: 2px solid green; */
-}
-
-.right {
-    position: absolute;
-    right: 34px;
-    top: 43px;
-    display: inline-block;
-    /* border: 2px solid yellow; */
-}
-
-.navbar {
-    display: inline-block;
-}
-
-.navbar li {
-    display: inline-block;
-    font-size: 25px;
-}
-
-.navbar li a {
-    color: white;
-    text-decoration: none;
-    padding: 34px 23px;
-
-}
-
-.navbar li a:hover,
-.navbar li a.active {
-    text-decoration: underline;
-    color: grey;
-
-}
-
-.btn {
-    font-family: 'Baloo Bhai', cursive;
-    margin: 0px 9px;
-    background-color: black;
-    color: white;
-    padding: 4px 14px;
-    border: 2px solid grey;
-    border-radius: 10px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: rgb(31, 30, 30);
-}
-
+/* Shared styles for form and calendar container */
 .container {
     border: 2px solid white;
-    margin: 106px 80px;
-    padding: 75px;
-    width: 33%;
-    border-radius: 28px;
+    margin: 50px 20px; /* Adjust margins for spacing */
+    padding: 30px;
+    max-width: 800px; /* Set a maximum width */
+    border-radius: 15px;
 }
 
-.form-group input {
+.form-group input,
+.form-group textarea {
     font-family: 'Baloo Bhai', cursive;
     text-align: center;
     display: block;
-    width: 508px;
-    padding: 1px;
+    width: 100%;
+    padding: 10px;
     border: 2px solid black;
-    margin: 11px auto;
-    font-size: 25px;
+    margin: 10px 0;
+    font-size: 20px;
     border-radius: 8px;
 }
 
-.container h1 {
-    text-align: center;
+.form-group textarea {
+    resize: vertical;
 }
 
-.container button {
-    display: block;
-    width: 74%;
-    margin: 20px auto;
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%; /* Make the form inputs full width on small screens */
+        box-sizing: border-box; /* Include padding and border in the element's total width */
+    }
+
+    .form-group {
+        display: block;
+        padding: 15px; /* Adjust padding for better spacing on small screens */
+        box-sizing: border-box; /* Include padding and border in the element's total width */
+    }
+
+    /* Styles for appointment form */
+    .appoin-form button {
+        display: block;
+        width: 100%; /* Adjust width for full width on small screens */
+        margin: 20px 0;
+    }
+
+    /* Styles for calendar table */
+    .calendar-appointments-table {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .calendar-appointments-table th,
+    .calendar-appointments-table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .calendar-appointments-table thead tr,
+    .calendar-appointments-table tbody tr {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+    }
+
+    .calendar-appointments-table td {
+        border: none;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .calendar-appointments-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 5px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        box-sizing: border-box;
+    }
 }
 
-.appoin { padding-block-start: 0; }
-
-.appoin-card .card-banner { display: none; }
-
-.appoin-card .card-content {
-  background-color: var(--indian-yellow);
-  padding: 80px 15px;
-  text-align: center;
-  color: var(--white);
+/* Styles for appointment card and actions */
+.appointment-card,
+.calendar-appointment-card,
+.appointment-details {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 10px;
 }
 
-.appoin-card .section-title { color: var(--white); }
-
-.appoin-card .section-text { margin-block: 15px 55px; }
-
-.input-field {
-  background-color: pink;
-  color: black;
-  min-height: 56px;
-  padding-inline: 25px;
-  border-radius: var(--radius-5);
-  margin-block-end: 20px;
-  outline: none;
-  outline-offset: 0;
+.card-info,
+.calendar-appointment-card .card-info {
+    flex: 1;
+    margin-right: 10px;
 }
 
-.input-field:focus { outline: 3px solid var(--black_30); }
-
-select.input-field { appearance: none; }
-
-select.input-field,
-.input-field::placeholder,
-.input-field.date {
-  font-family: var(--ff-oswald);
-  color: var(--eerie-black-1);
-  font-weight: var(--fw-500);
+.card-actions,
+.calendar-appointment-card .card-actions {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
 }
 
-.input-field > option {
-  color: var(--sonic-silver);
-  font-family: var(--ff-rubik);
+.btn {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
 }
 
-.input-field.date { text-transform: uppercase; }
-
-.input-field::-webkit-calendar-picker-indicator { opacity: 0.85; }
-
-textarea.input-field {
-  padding-block: 15px;
-  min-height: 100px;
-  height: 120px;
-  max-height: 150px;
-  resize: vertical;
+.edit-btn {
+    background-color: #4caf50;
+    color: white;
 }
 
-.form-btn {
-  color: black;
-  font-family: var(--ff-oswald);
-  font-size: var(--fs-14);
-  font-weight: var(--fw-500);
-  text-transform: uppercase;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border: 1px solid var(--white);
-  padding: 13px;
-  border-radius: var(--radius-5);
-  transition: var(--transition-1);
+.delete-btn {
+    background-color: #f44336;
+    color: white;
 }
-
-.form-btn:is(:hover, :focus) {
-  background-color: var(--white);
-  color: var(--eerie-black-1);
-}
-
-
-
