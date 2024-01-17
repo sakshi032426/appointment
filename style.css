@@ -191,5 +191,37 @@ body {
     background-color: #f44336;
     color: white;
 }
+/*changed*/
+/* Your existing styles */
+
+/* ... (previous styles) */
+
+/* Responsive styles */
+@media only screen and (max-width: 350px) {
+    /* Styles for calendar table on small screens */
+    .calendar-appointments-table th,
+    .calendar-appointments-table td {
+        /* ... (styles for small screens) */
+    }
+
+    /* Additional style for phone date message */
+    .calendar-appointments-table .phone-date-message {
+        /* ... (styles for small screens) */
+    }
+
+    /* Ensure the whole table fits within the container */
+    .calendar-container {
+        /* ... (styles for small screens) */
+    }
+
+    /* Hide unnecessary details on small screens */
+    .card-info,
+    .card-actions {
+        display: none;
+    }
+}
+
+/* ... (remaining styles) */
+
 
 
