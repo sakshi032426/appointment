@@ -10,9 +10,9 @@ body {
 /* Shared styles for form and calendar container */
 .container {
     border: 2px solid white;
-    margin: 50px 20px; /* Adjust margins for spacing */
+    margin: 50px 20px;
     padding: 30px;
-    max-width: 800px; /* Set a maximum width */
+    max-width: 800px;
     border-radius: 15px;
 }
 
@@ -38,10 +38,11 @@ body {
     .container {
         width: 90%;
     }
-.calendar-appointments-table {
+
+    .calendar-appointments-table {
         width: 100%;
         overflow-x: auto;
-        table-layout: fixed; /* Added to ensure uniform column width */
+        table-layout: fixed;
     }
 
     .calendar-appointments-table th,
@@ -51,7 +52,7 @@ body {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        max-width: 100%; /* Added to prevent overflow */
+        max-width: 100%;
     }
 
     .calendar-appointments-table thead tr,
@@ -78,34 +79,30 @@ body {
         box-sizing: border-box;
     }
 
-    /* Additional style for phone date message */
     .calendar-appointments-table .phone-date-message {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-}
 
     .form-group input,
     .form-group textarea {
-        width: 100%; /* Make the form inputs full width on small screens */
-        box-sizing: border-box; /* Include padding and border in the element's total width */
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .form-group {
         display: block;
-        padding: 15px; /* Adjust padding for better spacing on small screens */
-        box-sizing: border-box; /* Include padding and border in the element's total width */
+        padding: 15px;
+        box-sizing: border-box;
     }
 
-    /* Styles for appointment form */
     .appoin-form button {
         display: block;
-        width: 100%; /* Adjust width for full width on small screens */
+        width: 100%;
         margin: 20px 0;
     }
 
-    /* Styles for calendar table */
     .calendar-appointments-table {
         width: 100%;
         overflow-x: auto;
@@ -144,7 +141,6 @@ body {
         box-sizing: border-box;
     }
 
-    /* Additional style for phone date message */
     .calendar-appointments-table .phone-date-message {
         white-space: nowrap;
         overflow: hidden;
@@ -191,17 +187,9 @@ body {
     background-color: #f44336;
     color: white;
 }
-/*changed*/
-/* Your existing styles */
-
-/* ... (previous styles) */
-
-/* Responsive styles */
-/* ... (previous styles) */
 
 /* Responsive styles */
 @media only screen and (max-width: 350px) {
-    /* Styles for calendar table on small screens */
     .calendar-appointments-table {
         width: 100%;
         overflow-x: auto;
@@ -247,23 +235,15 @@ body {
         box-sizing: border-box;
     }
 
-    /* Additional style for phone date message */
     .calendar-appointments-table .phone-date-message {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
-    /* Hide unnecessary details on small screens */
-    .card-info,
-    .card-actions {
+    .calendar-appointments-table .card-info,
+    .calendar-appointments-table .card-actions {
         display: none;
     }
 }
-
-/* ... (remaining styles) */
-
-/* ... (remaining styles) */
-
-
 
